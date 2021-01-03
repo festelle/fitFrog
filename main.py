@@ -16,7 +16,8 @@ win = pygame.display.set_mode((screenwidth, screenheight))
 # icon = pygame.image.load('Pixel art gali 1.png')
 # pygame.display.set_icon(icon)
 # Nombre de la ventana
-pygame.display.set_caption("Frog")
+pygame.display.set_caption("star Frog")
+pygame.display.set_icon(pygame.image.load('imagenes\sprites\mirando1.png').convert_alpha())
 
 # Cargar las imágenes
 fondoNoche = pygame.image.load('imagenes/obj/fondo noche.png').convert()
