@@ -63,7 +63,7 @@ imgMirando2 = pygame.image.load('imagenes\sprites\mirando2.png').convert_alpha()
 
 imgPlataforma = pygame.image.load('imagenes\plataforma.png').convert_alpha()
 
-imgPlayAgain = pygame.image.load('imagenes\mensaje perdido 1.png').convert_alpha()
+imgPlayAgain = pygame.image.load('imagenes\mensaje perdido.png').convert_alpha()
 imgPlayAgain = pygame.transform.scale(imgPlayAgain, (510, 270))
 
 letraPlayAgain = pygame.image.load('imagenes\play again.png').convert_alpha()
@@ -231,7 +231,7 @@ class personaje(object):
             self.contador += 1
             if self.contador >= 4:
                 self.index += 1
-                self.contador = 0 
+                self.contador = 0
         
         elif self.debecaminar:
             self.animacion_caminando.draw(win, \
@@ -244,7 +244,7 @@ class personaje(object):
                 self.contador_caminando = 0
         
         elif self.debe_mirar:
-            if self.frames_mirando < 5:
+            if self.frames_mirando < 10:
                 win.blit(imgMirando1, (self.x + 18 + self.handle[4][0], self.y + self.handle[4][1] + 14))
                 self.frames_mirando += 1
             else:
