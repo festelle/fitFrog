@@ -62,6 +62,8 @@ imgMirando1 = pygame.image.load('imagenes\sprites\mirando1.png').convert_alpha()
 imgMirando2 = pygame.image.load('imagenes\sprites\mirando2.png').convert_alpha()
 
 imgPlataforma = pygame.image.load('imagenes\plataforma.png').convert_alpha()
+imgPlataforma2 = pygame.image.load('imagenes\plataforma2.png').convert_alpha()
+imgPlataforma3 = pygame.image.load('imagenes\plataforma3.png').convert_alpha()
 
 imgPlayAgain = pygame.image.load('imagenes\mensaje perdido.png').convert_alpha()
 imgPlayAgain = pygame.transform.scale(imgPlayAgain, (510, 270))
@@ -302,14 +304,21 @@ class plataforma(object):
         self.vecesTocado = 0
         self.contacto = False
         self.imgplataformaGenerada = pygame.transform.scale(imgPlataforma, (self.width, 20))
+        self.imgplataforma2Generada = pygame.transform.scale(imgPlataforma2, (self.width, 20))
+        self.imgplataforma3Generada = pygame.transform.scale(imgPlataforma3, (self.width, 20))
+
 
     def draw(self, win):
         # Hitbox
         self.y = self.yOriginal - camaraDeRana.cambio
         #pygame.draw.rect(win, (255, 0, 0), (self.x, self.y, self.width, self.height), 2)
+        if self.vecesTocado == 0:
+            win.blit(self.imgplataformaGenerada, (self.x,self.y))
+        elif self.vecesTocado == 1:
+            win.blit(self.imgplataforma2Generada, (self.x,self.y))
+        elif self.vecesTocado >= 2:
+            win.blit(self.imgplataforma3Generada, (self.x,self.y))
         
-        win.blit(self.imgplataformaGenerada, (self.x,self.y))
-
     def movimiento(self):
         self.y = self.yOriginal - camaraDeRana.cambio
         self.x += self.vel
