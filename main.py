@@ -19,23 +19,24 @@ win = pygame.display.set_mode((screenwidth, screenheight))
 pygame.display.set_caption("Frog")
 
 # Cargar las imágenes
-fondoNoche = pygame.image.load('imagenes/fondo noche.png').convert()
+fondoNoche = pygame.image.load('imagenes/obj/fondo noche.png').convert()
 
-imgLuna = pygame.image.load('imagenes/luna.png').convert()
+imgLuna = pygame.image.load('imagenes/obj/luna.png').convert()
 imgLuna.set_colorkey((51, 25, 149))
 
-imgBanca = pygame.image.load('imagenes/banca.png').convert()
+imgBanca = pygame.image.load('imagenes/obj/banca.png').convert()
 imgBanca.set_colorkey((51, 25, 149))
 
+''' 
 imgNubes = [pygame.image.load('imagenes/Nubes/Nube 1.png').convert(),
             pygame.image.load('imagenes/Nubes/Nube 2.png').convert(),
             pygame.image.load('imagenes/Nubes/Nube 3.png').convert(),
             pygame.image.load('imagenes/Nubes/Nube 4.png').convert(),
             pygame.image.load('imagenes/Nubes/Nube 5.png').convert(),
-            pygame.image.load('imagenes/Nubes/Nube 6.png').convert()]
+            pygame.image.load('imagenes/Nubes/Nube 6.png').convert()] 
 
 for nube in imgNubes:
-    nube.set_colorkey((254, 254, 254))
+    nube.set_colorkey((254, 254, 254)) '''
 
 imgHistoria1 = [pygame.image.load('imagenes/historias/historia1/historia1-1.png').convert(),
                 pygame.image.load('imagenes/historias/historia1/historia1-2.png').convert()]
@@ -48,10 +49,10 @@ imgDialogo = pygame.image.load('imagenes\historias\historia1\dialogo.png').conve
 imgDialogo = pygame.transform.scale(imgDialogo, (510, 150))
 imgDialogo.set_colorkey((255, 0, 0))
 
-imgEstrellaPequena = pygame.image.load('imagenes/estrella pequeña.png').convert()
-imgEstrellaMediana = pygame.image.load('imagenes/estrella mediana.png').convert()
+imgEstrellaPequena = pygame.image.load('imagenes/obj/estrella pequeña.png').convert()
+imgEstrellaMediana = pygame.image.load('imagenes/obj/estrella mediana.png').convert()
 
-imgAvion = pygame.image.load('imagenes/avion.png').convert()
+imgAvion = pygame.image.load('imagenes/obj/avion.png').convert()
 imgAvion.set_colorkey((51, 25, 149))
 imgAvion = pygame.transform.scale(imgAvion, (64, 64))
 
@@ -61,20 +62,20 @@ imgMirando1 = pygame.image.load('imagenes\sprites\mirando1.png').convert_alpha()
 #imgMirando = pygame.transform.scale(imgMirando, (64, 64))
 imgMirando2 = pygame.image.load('imagenes\sprites\mirando2.png').convert_alpha()
 
-imgPlataforma = pygame.image.load('imagenes\plataforma.png').convert_alpha()
-imgPlataforma2 = pygame.image.load('imagenes\plataforma2.png').convert_alpha()
-imgPlataforma3 = pygame.image.load('imagenes\plataforma3.png').convert_alpha()
+imgPlataforma = pygame.image.load('imagenes\obj\plataforma.png').convert_alpha()
+imgPlataforma2 = pygame.image.load('imagenes\obj\plataforma2.png').convert_alpha()
+imgPlataforma3 = pygame.image.load('imagenes\obj\plataforma3.png').convert_alpha()
 
-imgPlayAgain = pygame.image.load('imagenes\mensaje perdido.png').convert_alpha()
+imgPlayAgain = pygame.image.load('imagenes\obj\mensaje perdido.png').convert_alpha()
 imgPlayAgain = pygame.transform.scale(imgPlayAgain, (510, 270))
 
-letraPlayAgain = pygame.image.load('imagenes\play again.png').convert_alpha()
+letraPlayAgain = pygame.image.load('imagenes\obj\play again.png').convert_alpha()
 
-letraNo = pygame.image.load('imagenes\letra_no.png').convert_alpha()
+letraNo = pygame.image.load('imagenes\obj\letra_no.png').convert_alpha()
 
-letraYes = pygame.image.load('imagenes\yes.png').convert_alpha()
+letraYes = pygame.image.load('imagenes\obj\yes.png').convert_alpha()
 
-letraStart = pygame.image.load('imagenes\start.png').convert()
+letraStart = pygame.image.load('imagenes\obj\start.png').convert()
 letraStart.set_colorkey((23, 39, 183))
 
 
