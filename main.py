@@ -457,6 +457,7 @@ class historia(object):
         self.j = 255
         self.a = 0
         self.imagen_lista = False
+        self.imagen_cargada = False
     
     def reiniciar(self):
         self.mostrando = True
@@ -502,6 +503,7 @@ class historia(object):
         self.a += 2
         if self.a >= 255:
             self.imagen_lista = True
+            self.imagen_cargada = True
 
 
 
@@ -841,7 +843,7 @@ while run:
                 
         elif historia2.mostrando:
             if event.type == pygame.KEYUP:
-                if event.key == pygame.K_SPACE:
+                if event.key == pygame.K_SPACE and historia2.imagen_cargada:
                     historia2.pasarimagen()
         elif animacion1.mostrando:
             if event.type == pygame.KEYUP:
